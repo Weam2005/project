@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تبادل الكتب</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js"></script>
+<script src="script.js"></script>
+
+    <h1>📚 تبادل الكتب</h1>
+    <input type="text" id="bookTitle" placeholder="عنوان الكتاب">
+    <input type="text" id="bookAuthor" placeholder="المؤلف">
+    <input type="text" id="bookDescription" placeholder="الوصف">
+    <input type="text" id="contactInfo" placeholder="معلومات التواصل">
+    <button onclick="addBook()">إضافة الكتاب</button>
+    <h2>📖 الكتب المتاحة</h2>
+    <div id="booksList"></div>
+    <script src="script.js"></script>
+   
+
+</body>
+</html>

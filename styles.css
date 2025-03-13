@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #4a90e2, #006bb3);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* 🔹 تنسيق الهيدر */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-radius: 0 0 15px 15px;
+}
+
+/* 🔹 اللوجو */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* 🔹 القائمة الرئيسية */
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* ✅ تقليل المسافة بين العناوين */
+.nav-links li {
+    margin: 0 8px; /* تقليل المسافة بين العناصر */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 12px; /* تصغير الحواف لتقليل المسافات */
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* 🔹 زر القائمة للجوال */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* 🔹 تنسيق المحتوى الرئيسي */
+.container {
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* 🔹 تأثير الموجات */
+.waves {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.waves svg {
+    animation: waveAnimation 5s infinite linear;
+}
+
+@keyframes waveAnimation {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+/* 🔹 استجابة للجوال */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 5px 0; /* تصغير المسافة بين الروابط في الجوال */
+    }
+}

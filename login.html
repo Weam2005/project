@@ -1,0 +1,21 @@
+const auth = firebase.auth();
+
+// تسجيل مستخدم جديد
+function signUp() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    auth.createUserWithEmailAndPassword(email, password)
+        .then(user => alert("🎉 تم التسجيل بنجاح!"))
+        .catch(error => alert(error.message));
+}
+
+// تسجيل الدخول للمستخدم
+function signIn() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    auth.signInWithEmailAndPassword(email, password)
+        .then(user => alert("🚀 تم تسجيل الدخول!"))
+        .catch(error => alert(error.message));
+}
